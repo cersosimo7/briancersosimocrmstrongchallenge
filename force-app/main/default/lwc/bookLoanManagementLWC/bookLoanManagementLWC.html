@@ -1,0 +1,74 @@
+<template>
+    <lightning-card>
+      <div>
+        <lightning-layout>
+          <lightning-layout-item size="3" class="slds-m-around_medium">
+            <lightning-input type="text" label="Search Books" placeholder="Type book name or author..." onchange={handleSearch}></lightning-input>
+            <lightning-input type="checkbox" label="Multi Loan" onchange={handleBulkLoanChecked}></lightning-input>
+          </lightning-layout-item>
+          <lightning-layout-item size="3" class="slds-m-around_medium">
+            <lightning-record-picker label="Select Contact" object-api-name="Contact" onchange={handleRecordChange}></lightning-record-picker>
+          </lightning-layout-item>
+          <lightning-layout-item size="3" class="slds-m-around_medium" if:true={isBulkLoan}>
+            <div class="slds-m-vertical_medium">
+              <p>
+                <Strong>Selected Books</Strong>
+              </p>
+            </div>
+            <template for:each={selectedBooks} for:item="book">
+              <lightning-badge class="slds-badge_lightest slds-m-vertical_small" key={book.Id} label={book.Title__c}></lightning-badge>
+            </template>
+          </lightning-layout-item>
+          <lightning-layout-item size="3" class="slds-m-around_medium slds-p-top_medium" if:true={isBulkLoan}>
+              <lightning-button label="Multi loan" onclick={handleButtonActionMultiLoan} disabled={disableLoanActionButton}></lightning-button>
+          </lightning-layout-item>
+        </lightning-layout>
+      </div>
+      <template if:true={hasBooks}>
+        <div class="slds-m-around_medium">
+          <div class="slds-table_header-fixed_container">
+            <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-table_striped slds-m-around_medium">
+              <thead>
+                <tr class="slds-text-heading_label">
+                  <th scope="col" if:true={isBulkLoan}>
+                    <div class="slds-truncate" title="Select">Select</div>
+                  </th>
+                  <th scope="col">
+                    <div class="slds-truncate" title="Title">Title</div>
+                  </th>
+                  <th scope="col">
+                    <div class="slds-truncate" title="Available Copies">Available Copies</div>
+                  </th>
+                  <th scope="col">
+                    <div class="slds-truncate" title="Author">Author</div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <template for:each={books} for:item="book">
+                  <tr key={book.Id}>
+                    <td data-label="Select" if:true={isBulkLoan}>
+                      <lightning-input type="checkbox" name="selectBook" value={book.Id} checked={book.checked} onchange={handleCheckboxChange} disabled={book.disableCheckbox}></lightning-input>
+                    </td>
+                    <td data-label="Title">
+                      <div class="slds-truncate" title={book.Title__c}>{book.Title__c}</div>
+                    </td>
+                    <td data-label="Available Copies">
+                      <div class="slds-truncate" title={book.Available_Copies__c}>{book.Available_Copies__c}</div>
+                    </td>
+                    <td data-label="Author">
+                      <div class="slds-truncate" title={book.Author__c}>{book.Author__c}</div>
+                    </td>
+                    <td data-label="Action" if:false={isBulkLoan}>
+                      <lightning-button label="Direct Loan" onclick={handleButtonAction} data-id={book.Id} disabled={disableLoanActionButton}></lightning-button>
+                    </td>
+                  </tr>
+                </template>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </template>
+      <lightning-spinner if:true={isProcessing} alternative-text="Loading" size="medium"></lightning-spinner>
+    </lightning-card>
+  </template>

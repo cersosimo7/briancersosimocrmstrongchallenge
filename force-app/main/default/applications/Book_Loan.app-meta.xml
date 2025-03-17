@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#FDE933</headerColor>
+        <logo>bookloanicon</logo>
+        <logoVersion>1</logoVersion>
+        <shouldOverrideOrgTheme>true</shouldOverrideOrgTheme>
+    </brand>
+    <formFactors>Small</formFactors>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
+    <label>Book Loan</label>
+    <navType>Standard</navType>
+    <tabs>Book_Loan_Lightning_Page</tabs>
+    <tabs>Library_Book__c</tabs>
+    <tabs>Library_Book_Loan__c</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>Book_Loan_UtilityBar</utilityBar>
+</CustomApplication>
