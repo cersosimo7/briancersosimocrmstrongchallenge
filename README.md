@@ -1,18 +1,19 @@
-# Salesforce DX Project: Next Steps
+# Book Loan App
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+![image](https://github.com/user-attachments/assets/0d1d13c4-f297-4a4c-a54c-8b5d1eefc4b9)
 
-## How Do You Plan to Deploy Your Changes?
+## 2 Modes
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+## Direct Loan
+![image](https://github.com/user-attachments/assets/7640ba33-eb48-4d07-878f-fd2571d5a7d2)
 
-## Configure Your Salesforce DX Project
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+## Multi Loan
+![image](https://github.com/user-attachments/assets/a331d38d-4c71-4fb0-a568-efc59bb446ba)
 
-## Read All About It
+## Updates stock in real time
+![image](https://github.com/user-attachments/assets/c9f9b2a3-6b8b-4966-8218-64cdff9e175a)
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+## End Loan with a click in their record page
+![image](https://github.com/user-attachments/assets/668a4633-00c3-4038-aa51-0fded28cd740)
+
