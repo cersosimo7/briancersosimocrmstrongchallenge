@@ -17,3 +17,8 @@
 ## End Loan with a click in their record page
 ![image](https://github.com/user-attachments/assets/668a4633-00c3-4038-aa51-0fded28cd740)
 
+## Error handling
+![image](https://github.com/user-attachments/assets/4a56384b-4914-429f-a617-0517d4d8e577)
+
+## Error prevention (disabled checkbox if no stock)
+![image](https://github.com/user-attachments/assets/af988fd7-9ea8-4675-aab4-cfae8f0af04f)
